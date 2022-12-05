@@ -23,10 +23,7 @@ namespace Rev1Modder
             FolderBrowserDialog fbd = new FolderBrowserDialog();
             DialogResult result = fbd.ShowDialog();
             if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
-            {
                 txt_Path.Text = fbd.SelectedPath;
-                //string[] files = Directory.GetFiles(fbd.SelectedPath);
-            }
         }
 
         private void btn_Start_Click(object sender, EventArgs e)

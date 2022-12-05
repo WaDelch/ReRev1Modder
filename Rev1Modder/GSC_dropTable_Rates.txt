@@ -32,7 +32,7 @@ Lv.50		30
 
 
 <WeaponTagRate>
-
+start at 0x1E, 0xA per Tag
 No Tag		50
 Short Range 	4,5
 Speed Shot	4,5
@@ -48,11 +48,12 @@ Sonic Assist+ 	3,5
 Rare Tag 	3
 
 <WeaponSlotRate>
-
+start 7th set at 0xBC, 0xA per Slot
 -2 		9
 -1 		22
 +0 		41
 +1 		14
 +2 		14
 
-
+playertalent
+start at 0x40, 0x4 per talent, 0x48 per player

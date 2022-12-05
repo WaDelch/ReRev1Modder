@@ -53,6 +53,7 @@
             this.txt_Path.Name = "txt_Path";
             this.txt_Path.Size = new System.Drawing.Size(419, 22);
             this.txt_Path.TabIndex = 1;
+            this.txt_Path.Text = "C:\\Users\\Waldemar Delchmann\\Desktop\\myVer\\coop_table\\game\\coop_table";
             // 
             // btn_Path
             // 
@@ -77,9 +78,10 @@
             // 
             // btn_Start
             // 
+            this.btn_Start.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Start.Location = new System.Drawing.Point(42, 123);
             this.btn_Start.Name = "btn_Start";
-            this.btn_Start.Size = new System.Drawing.Size(95, 40);
+            this.btn_Start.Size = new System.Drawing.Size(121, 40);
             this.btn_Start.TabIndex = 7;
             this.btn_Start.Text = "Start Modding";
             this.btn_Start.UseVisualStyleBackColor = true;
