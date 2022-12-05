@@ -40,7 +40,7 @@
             // 
             this.lbl_Rev1Modder.AutoSize = true;
             this.lbl_Rev1Modder.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Rev1Modder.Location = new System.Drawing.Point(36, 9);
+            this.lbl_Rev1Modder.Location = new System.Drawing.Point(15, 7);
             this.lbl_Rev1Modder.Name = "lbl_Rev1Modder";
             this.lbl_Rev1Modder.Size = new System.Drawing.Size(555, 31);
             this.lbl_Rev1Modder.TabIndex = 0;
@@ -49,9 +49,9 @@
             // txt_Path
             // 
             this.txt_Path.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Path.Location = new System.Drawing.Point(42, 86);
+            this.txt_Path.Location = new System.Drawing.Point(21, 84);
             this.txt_Path.Name = "txt_Path";
-            this.txt_Path.Size = new System.Drawing.Size(419, 22);
+            this.txt_Path.Size = new System.Drawing.Size(499, 22);
             this.txt_Path.TabIndex = 1;
             this.txt_Path.Text = "C:\\Users\\Waldemar Delchmann\\Desktop\\myVer\\coop_table\\game\\coop_table";
             // 
@@ -59,7 +59,7 @@
             // 
             this.btn_Path.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Path.BackgroundImage")));
             this.btn_Path.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_Path.Location = new System.Drawing.Point(467, 80);
+            this.btn_Path.Location = new System.Drawing.Point(526, 80);
             this.btn_Path.Name = "btn_Path";
             this.btn_Path.Size = new System.Drawing.Size(34, 31);
             this.btn_Path.TabIndex = 5;
@@ -70,16 +70,16 @@
             // 
             this.lbl_Path.AutoSize = true;
             this.lbl_Path.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Path.Location = new System.Drawing.Point(39, 67);
+            this.lbl_Path.Location = new System.Drawing.Point(18, 65);
             this.lbl_Path.Name = "lbl_Path";
-            this.lbl_Path.Size = new System.Drawing.Size(174, 16);
+            this.lbl_Path.Size = new System.Drawing.Size(278, 16);
             this.lbl_Path.TabIndex = 6;
-            this.lbl_Path.Text = "Select the coop_table folder";
+            this.lbl_Path.Text = "Select the (uncompressed!) coop_table folder";
             // 
             // btn_Start
             // 
             this.btn_Start.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Start.Location = new System.Drawing.Point(42, 123);
+            this.btn_Start.Location = new System.Drawing.Point(21, 121);
             this.btn_Start.Name = "btn_Start";
             this.btn_Start.Size = new System.Drawing.Size(121, 40);
             this.btn_Start.TabIndex = 7;
@@ -91,7 +91,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(631, 175);
+            this.ClientSize = new System.Drawing.Size(583, 175);
             this.Controls.Add(this.btn_Start);
             this.Controls.Add(this.lbl_Path);
             this.Controls.Add(this.btn_Path);
