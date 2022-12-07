@@ -53,7 +53,6 @@
             this.txt_Path.Name = "txt_Path";
             this.txt_Path.Size = new System.Drawing.Size(499, 22);
             this.txt_Path.TabIndex = 1;
-            this.txt_Path.Text = "C:\\Users\\Waldemar Delchmann\\Desktop\\myVer\\coop_table\\game\\coop_table";
             // 
             // btn_Path
             // 
