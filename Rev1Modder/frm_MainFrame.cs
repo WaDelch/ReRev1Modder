@@ -53,16 +53,21 @@ namespace Rev1Modder
 
         void PopulateFields()
         {
-            readBytes(GetTextFields("weaponRate").ToArray(), wRatePath, 32, 11, 1);
-            readBytes(GetTextFields("weaponLevelRate").ToArray(), wLevelPath, 30, 6, 100);
-            readBytes(GetTextFields("weaponTagRate").ToArray(), wTagPath, 30, 6, 1);
-            readBytes(GetTextFields("weaponSlotRate").ToArray(), wSlotPath, 188, 1, 100);
+            try
+            {
+                readBytes(GetTextFields("weaponRate").ToArray(), wRatePath, 32, 11, 1);
+                readBytes(GetTextFields("weaponLevelRate").ToArray(), wLevelPath, 30, 6, 100);
+                readBytes(GetTextFields("weaponTagRate").ToArray(), wTagPath, 30, 6, 1);
+                readBytes(GetTextFields("weaponSlotRate").ToArray(), wSlotPath, 188, 1, 100);
+            }
+            catch
+            {
+                this.Close();
+            }
         }
 
         void readBytes(TextBox[] tBoxes, string path, int startPos, int jump, int multiplier)
         {
-            try
-            {
                 byte[] getBytes = new byte[4];
                 FileStream cFile = new FileStream(path, FileMode.Open, FileAccess.Read);
                 cFile.Position = startPos;
@@ -73,11 +78,6 @@ namespace Rev1Modder
                     cFile.Position += jump;
                 }
                 cFile.Close();
-            }
-            catch
-            {
-                MessageBox.Show("Failed to read data.");
-            }
         }
 
         void writeBytes(TextBox[] tBoxes, string path, int startPos, int jump, int divider)
@@ -114,7 +114,6 @@ namespace Rev1Modder
             else
                 return true;
         }
-
 
         private void frm_MainFrame_Load(object sender, EventArgs e)
         {
