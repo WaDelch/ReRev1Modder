@@ -39,10 +39,10 @@
             // lbl_Rev1Modder
             // 
             this.lbl_Rev1Modder.AutoSize = true;
-            this.lbl_Rev1Modder.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Rev1Modder.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Rev1Modder.Location = new System.Drawing.Point(15, 7);
             this.lbl_Rev1Modder.Name = "lbl_Rev1Modder";
-            this.lbl_Rev1Modder.Size = new System.Drawing.Size(555, 31);
+            this.lbl_Rev1Modder.Size = new System.Drawing.Size(502, 29);
             this.lbl_Rev1Modder.TabIndex = 0;
             this.lbl_Rev1Modder.Text = "Resident Evil Revelations 1 Modding Tool";
             // 

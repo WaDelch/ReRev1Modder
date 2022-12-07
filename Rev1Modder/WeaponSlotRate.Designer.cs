@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.txt_Min2 = new System.Windows.Forms.TextBox();
+            this.txt_Min1 = new System.Windows.Forms.TextBox();
+            this.txt_Zero = new System.Windows.Forms.TextBox();
+            this.txt_Plus1 = new System.Windows.Forms.TextBox();
             this.txt_Plus2 = new System.Windows.Forms.TextBox();
             this.lbl_Plus2 = new System.Windows.Forms.Label();
             this.lbl_Zero = new System.Windows.Forms.Label();
             this.lbl_Min1 = new System.Windows.Forms.Label();
             this.lbl_Min2 = new System.Windows.Forms.Label();
-            this.txt_Min1 = new System.Windows.Forms.TextBox();
             this.lbl_Plus1 = new System.Windows.Forms.Label();
-            this.txt_Min2 = new System.Windows.Forms.TextBox();
-            this.txt_Zero = new System.Windows.Forms.TextBox();
-            this.txt_Plus1 = new System.Windows.Forms.TextBox();
             this.tlp_WeaponSlotRate = new System.Windows.Forms.TableLayoutPanel();
             this.tlp_WeaponSlotRate.SuspendLayout();
             this.SuspendLayout();
@@ -165,16 +165,16 @@
             this.tlp_WeaponSlotRate.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tlp_WeaponSlotRate.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tlp_WeaponSlotRate.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tlp_WeaponSlotRate.Controls.Add(this.txt_Plus1, 3, 1);
-            this.tlp_WeaponSlotRate.Controls.Add(this.txt_Zero, 2, 1);
             this.tlp_WeaponSlotRate.Controls.Add(this.txt_Min2, 0, 1);
-            this.tlp_WeaponSlotRate.Controls.Add(this.lbl_Plus1, 3, 0);
             this.tlp_WeaponSlotRate.Controls.Add(this.txt_Min1, 1, 1);
+            this.tlp_WeaponSlotRate.Controls.Add(this.txt_Zero, 2, 1);
+            this.tlp_WeaponSlotRate.Controls.Add(this.txt_Plus1, 3, 1);
+            this.tlp_WeaponSlotRate.Controls.Add(this.txt_Plus2, 4, 1);
+            this.tlp_WeaponSlotRate.Controls.Add(this.lbl_Plus1, 3, 0);
             this.tlp_WeaponSlotRate.Controls.Add(this.lbl_Min2, 0, 0);
             this.tlp_WeaponSlotRate.Controls.Add(this.lbl_Min1, 1, 0);
             this.tlp_WeaponSlotRate.Controls.Add(this.lbl_Zero, 2, 0);
             this.tlp_WeaponSlotRate.Controls.Add(this.lbl_Plus2, 4, 0);
-            this.tlp_WeaponSlotRate.Controls.Add(this.txt_Plus2, 4, 1);
             this.tlp_WeaponSlotRate.Location = new System.Drawing.Point(3, 3);
             this.tlp_WeaponSlotRate.Name = "tlp_WeaponSlotRate";
             this.tlp_WeaponSlotRate.RowCount = 2;

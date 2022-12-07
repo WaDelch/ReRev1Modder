@@ -15,7 +15,6 @@ namespace Rev1Modder
     {
         string Path, wRatePath, wLevelPath, wTagPath, wSlotPath, pTalentPath;
 
-
         public frm_MainFrame(string p)
         {
             InitializeComponent();
@@ -30,11 +29,6 @@ namespace Rev1Modder
 
         IEnumerable<TextBox> GetTextFields(string ftype)
         {
-            //var weaponRateBoxes = new List<Object>();
-            //foreach (Control c in weaponRate.Controls)
-            //    if(c is TextBox)
-            //    weaponRateBoxes.Add(c);
-
             IEnumerable<TextBox> tempTexts = Enumerable.Empty<TextBox>();
             switch (ftype)
             {
@@ -59,64 +53,68 @@ namespace Rev1Modder
 
         void PopulateFields()
         {
-            IEnumerable<TextBox> weaponRateBoxes = GetTextFields("weaponRate");
-            IEnumerable<TextBox> weaponLevelRateBoxes = GetTextFields("weaponLevelRate");
-            IEnumerable<TextBox> weaponTagRateBoxes = GetTextFields("weaponTagRate");
-            IEnumerable<TextBox> weaponSlotRateBoxes = GetTextFields("weaponSlotRate");
-
-            readBytes(weaponRateBoxes.ToArray(), wRatePath, 32, 11, 1);
-            readBytes(weaponLevelRateBoxes.ToArray(), wLevelPath, 30, 6, 100);
-            readBytes(weaponTagRateBoxes.ToArray(), wTagPath, 30, 6, 1);
-            readBytes(weaponSlotRateBoxes.ToArray(), wSlotPath, 188, 1, 100);
+            readBytes(GetTextFields("weaponRate").ToArray(), wRatePath, 32, 11, 1);
+            readBytes(GetTextFields("weaponLevelRate").ToArray(), wLevelPath, 30, 6, 100);
+            readBytes(GetTextFields("weaponTagRate").ToArray(), wTagPath, 30, 6, 1);
+            readBytes(GetTextFields("weaponSlotRate").ToArray(), wSlotPath, 188, 1, 100);
         }
 
         void readBytes(TextBox[] tBoxes, string path, int startPos, int jump, int multiplier)
         {
-            byte[] getBytes = new byte[4];
-            FileStream cFile = new FileStream(path, FileMode.Open, FileAccess.Read);
-            cFile.Position = startPos;
-            foreach(TextBox tb in tBoxes)
+            try
             {
-                cFile.Read(getBytes, 0, 4);
-                tb.Text = (BitConverter.ToSingle(getBytes, 0) * multiplier).ToString();
-                cFile.Position += jump;
+                byte[] getBytes = new byte[4];
+                FileStream cFile = new FileStream(path, FileMode.Open, FileAccess.Read);
+                cFile.Position = startPos;
+                foreach (TextBox tb in tBoxes)
+                {
+                    cFile.Read(getBytes, 0, 4);
+                    tb.Text = (BitConverter.ToSingle(getBytes, 0) * multiplier).ToString();
+                    cFile.Position += jump;
+                }
+                cFile.Close();
             }
-            cFile.Close();
+            catch
+            {
+                MessageBox.Show("Failed to read data.");
+            }
         }
 
         void writeBytes(TextBox[] tBoxes, string path, int startPos, int jump, int divider)
         {
-            byte[] setBytes = new byte[4];
-            FileStream cFile = new FileStream(path, FileMode.Open, FileAccess.Write);
-            cFile.Position = startPos;
-            foreach (TextBox tb in tBoxes)
+            try
             {
-                setBytes = BitConverter.GetBytes(Convert.ToSingle(tb.Text) / divider);
-                cFile.Write(setBytes, 0, 4);
-                cFile.Position += jump;
+                byte[] setBytes = new byte[4];
+                FileStream cFile = new FileStream(path, FileMode.Open, FileAccess.Write);
+                cFile.Position = startPos;
+                foreach (TextBox tb in tBoxes)
+                {
+                    setBytes = BitConverter.GetBytes(Convert.ToSingle(tb.Text) / divider);
+                    cFile.Write(setBytes, 0, 4);
+                    cFile.Position += jump;
+                }
+                cFile.Close();
             }
-            cFile.Close();
+            catch
+            {
+                MessageBox.Show("Failed to write data.");
+            }
         }
 
-        void ApplyWeaponRate()
+        bool InputCheck(TextBox[] tBoxes)
         {
-
+            float check100 = 0;
+            foreach (TextBox tb in tBoxes)
+                check100 += Convert.ToSingle(tb.Text);
+            if (check100 != 100)
+            {
+                MessageBox.Show("Error! Make sure all Fields add up to exactly 100.\nCurrent value: " + check100);
+                return false;
+            }
+            else
+                return true;
         }
 
-        void ApplyWeaponLevelRate()
-        {
-
-        }
-
-        void ApplyWeaponTagRate()
-        {
-
-        }
-
-        void ApplyWeaponSlotRate()
-        {
-
-        }
 
         private void frm_MainFrame_Load(object sender, EventArgs e)
         {
@@ -158,62 +156,45 @@ namespace Rev1Modder
 
         private void btn_ApplyWeapons_Click(object sender, EventArgs e)
         {
-            IEnumerable<TextBox> weaponRateBoxes = GetTextFields("weaponRate");
-            IEnumerable<TextBox> weaponLevelRateBoxes = GetTextFields("weaponLevelRate");
-            IEnumerable<TextBox> weaponTagRateBoxes = GetTextFields("weaponTagRate");
-            IEnumerable<TextBox> weaponSlotRateBoxes = GetTextFields("weaponSlotRate");
-            float check100 = 0;
+            TextBox[] weaponRateBoxes = GetTextFields("weaponRate").ToArray();
+            TextBox[] weaponLevelRateBoxes = GetTextFields("weaponLevelRate").ToArray();
+            TextBox[] weaponTagRateBoxes = GetTextFields("weaponTagRate").ToArray();
+            TextBox[] weaponSlotRateBoxes = GetTextFields("weaponSlotRate").ToArray();
 
-            if(rdb_WeaponRate.Checked)
+            if (rdb_WeaponRate.Checked)
             {
-                foreach(TextBox tb in weaponRateBoxes)
-                    check100 += Convert.ToSingle(tb.Text);
-                if (check100 != 100)
+                if (InputCheck(weaponRateBoxes))
                 {
-                    MessageBox.Show("Error! Make sure all Fields add up to exactly 100.");
-                    return;
+                    writeBytes(weaponRateBoxes, wRatePath, 32, 11, 1);
+                    MessageBox.Show("Writing complete.");
                 }
-                writeBytes(weaponRateBoxes.ToArray(), wRatePath, 30, 6, 1);
-                MessageBox.Show("Writing complete.");
             }
 
-            else if(rdb_WeaponLevelRate.Checked)
+            else if (rdb_WeaponLevelRate.Checked)
             {
-                foreach(TextBox tb in weaponLevelRateBoxes)
-                    check100 += Convert.ToSingle(tb.Text);
-                if(check100 != 100)
+                if (InputCheck(weaponLevelRateBoxes))
                 {
-                    MessageBox.Show("Error! Make sure all Fields add up to exactly 100.");
-                    return;
+                    writeBytes(weaponLevelRateBoxes, wLevelPath, 30, 6, 100);
+                    MessageBox.Show("Writing complete.");
                 }
-                writeBytes(weaponLevelRateBoxes.ToArray(), wLevelPath, 30, 6, 100);
-                MessageBox.Show("Writing complete.");
             }
 
-            else if(rdb_WeaponTagRate.Checked)
+            else if (rdb_WeaponTagRate.Checked)
             {
-                foreach (TextBox tb in weaponTagRateBoxes)
-                    check100 += Convert.ToSingle(tb.Text);
-                if (check100 != 100)
+                if (InputCheck(weaponTagRateBoxes))
                 {
-                    MessageBox.Show("Error! Make sure all Fields add up to exactly 100.");
-                    return;
+                    writeBytes(weaponTagRateBoxes, wTagPath, 30, 6, 1);
+                    MessageBox.Show("Writing complete.");
                 }
-                writeBytes(weaponTagRateBoxes.ToArray(), wTagPath, 30, 6, 1);
-                MessageBox.Show("Writing complete.");
             }
 
-            else if(rdb_WeaponSlotRate.Checked)
+            else if (rdb_WeaponSlotRate.Checked)
             {
-                foreach (TextBox tb in weaponSlotRateBoxes)
-                    check100 += Convert.ToSingle(tb.Text);
-                if (check100 != 100)
+                if (InputCheck(weaponSlotRateBoxes))
                 {
-                    MessageBox.Show("Error! Make sure all Fields add up to exactly 100.");
-                    return;
+                    writeBytes(weaponSlotRateBoxes, wSlotPath, 188, 1, 100);
+                    MessageBox.Show("Writing complete.");
                 }
-                writeBytes(weaponTagRateBoxes.ToArray(), wTagPath, 30, 6, 100);
-                MessageBox.Show("Writing complete.");
             }
         }
 
@@ -226,15 +207,14 @@ namespace Rev1Modder
                 MessageBox.Show("Select a Player!");
                 return;
             }
-            IEnumerable<TextBox> playerTalentBoxes = GetTextFields("playerTalent");
-            readBytes(playerTalentBoxes.ToArray(), pTalentPath, 64 + (95 * lbx_PlayerSelect.SelectedIndex), 1, 100);
+            readBytes(GetTextFields("playerTalent").ToArray(), pTalentPath, 64 + (95 * lbx_PlayerSelect.SelectedIndex), 1, 100);
         }
 
         private void btn_ApplyPlayers_Click(object sender, EventArgs e)
         {
-            IEnumerable<TextBox> playerTalentBoxes = GetTextFields("playerTalent");
+            TextBox[] playerTalentBoxes = GetTextFields("playerTalent").ToArray();
             float tempFloat;
-            foreach(TextBox tb in playerTalentBoxes)
+            foreach (TextBox tb in playerTalentBoxes)
             {
                 if (!Single.TryParse(tb.Text, out tempFloat) || tb.Text.Contains('-'))
                 {
@@ -242,7 +222,7 @@ namespace Rev1Modder
                     return;
                 }
             }
-            writeBytes(playerTalentBoxes.ToArray(), pTalentPath, 64 + (95 * lbx_PlayerSelect.SelectedIndex), 1, 100);
+            writeBytes(playerTalentBoxes, pTalentPath, 64 + (95 * lbx_PlayerSelect.SelectedIndex), 1, 100);
             MessageBox.Show("Writing complete.");
         }
     }
