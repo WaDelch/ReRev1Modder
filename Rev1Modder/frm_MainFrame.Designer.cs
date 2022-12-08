@@ -75,10 +75,10 @@
             this.lbl_Evade = new System.Windows.Forms.Label();
             this.lbl_Recovery = new System.Windows.Forms.Label();
             this.lbx_PlayerSelect = new System.Windows.Forms.ListBox();
-            this.weaponSlotRate = new Rev1Modder.WeaponSlotRate();
             this.weaponTagRate = new Rev1Modder.WeaponTagRate();
             this.weaponLevelRate = new Rev1Modder.WeaponLevelRate();
             this.weaponRate = new Rev1Modder.WeaponRate();
+            this.weaponSlotRate = new Rev1Modder.WeaponSlotRate();
             this.tbc_Main.SuspendLayout();
             this.tbp_Weapons.SuspendLayout();
             this.tbp_Player.SuspendLayout();
@@ -100,14 +100,14 @@
             // 
             this.tbp_Weapons.BackColor = System.Drawing.SystemColors.Control;
             this.tbp_Weapons.Controls.Add(this.btn_ApplyWeapons);
-            this.tbp_Weapons.Controls.Add(this.weaponSlotRate);
-            this.tbp_Weapons.Controls.Add(this.weaponTagRate);
-            this.tbp_Weapons.Controls.Add(this.weaponLevelRate);
-            this.tbp_Weapons.Controls.Add(this.weaponRate);
             this.tbp_Weapons.Controls.Add(this.rdb_WeaponTagRate);
             this.tbp_Weapons.Controls.Add(this.rdb_WeaponSlotRate);
             this.tbp_Weapons.Controls.Add(this.rdb_WeaponLevelRate);
             this.tbp_Weapons.Controls.Add(this.rdb_WeaponRate);
+            this.tbp_Weapons.Controls.Add(this.weaponSlotRate);
+            this.tbp_Weapons.Controls.Add(this.weaponTagRate);
+            this.tbp_Weapons.Controls.Add(this.weaponLevelRate);
+            this.tbp_Weapons.Controls.Add(this.weaponRate);
             this.tbp_Weapons.Location = new System.Drawing.Point(4, 25);
             this.tbp_Weapons.Name = "tbp_Weapons";
             this.tbp_Weapons.Padding = new System.Windows.Forms.Padding(3);
@@ -713,19 +713,11 @@
             this.lbx_PlayerSelect.TabIndex = 1;
             this.lbx_PlayerSelect.SelectedIndexChanged += new System.EventHandler(this.lbx_PlayerSelect_SelectedIndexChanged);
             // 
-            // weaponSlotRate
-            // 
-            this.weaponSlotRate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.weaponSlotRate.Location = new System.Drawing.Point(8, 55);
-            this.weaponSlotRate.Name = "weaponSlotRate";
-            this.weaponSlotRate.Size = new System.Drawing.Size(840, 360);
-            this.weaponSlotRate.TabIndex = 4;
-            this.weaponSlotRate.Visible = false;
-            // 
             // weaponTagRate
             // 
             this.weaponTagRate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.weaponTagRate.Location = new System.Drawing.Point(8, 55);
+            this.weaponTagRate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.weaponTagRate.Name = "weaponTagRate";
             this.weaponTagRate.Size = new System.Drawing.Size(840, 360);
             this.weaponTagRate.TabIndex = 3;
@@ -735,6 +727,7 @@
             // 
             this.weaponLevelRate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.weaponLevelRate.Location = new System.Drawing.Point(8, 55);
+            this.weaponLevelRate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.weaponLevelRate.Name = "weaponLevelRate";
             this.weaponLevelRate.Size = new System.Drawing.Size(840, 360);
             this.weaponLevelRate.TabIndex = 2;
@@ -744,9 +737,19 @@
             // 
             this.weaponRate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.weaponRate.Location = new System.Drawing.Point(8, 55);
+            this.weaponRate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.weaponRate.Name = "weaponRate";
-            this.weaponRate.Size = new System.Drawing.Size(840, 360);
+            this.weaponRate.Size = new System.Drawing.Size(808, 328);
             this.weaponRate.TabIndex = 1;
+            // 
+            // weaponSlotRate
+            // 
+            this.weaponSlotRate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.weaponSlotRate.Location = new System.Drawing.Point(8, 55);
+            this.weaponSlotRate.Margin = new System.Windows.Forms.Padding(4);
+            this.weaponSlotRate.Name = "weaponSlotRate";
+            this.weaponSlotRate.Size = new System.Drawing.Size(840, 360);
+            this.weaponSlotRate.TabIndex = 6;
             // 
             // frm_MainFrame
             // 
@@ -816,10 +819,10 @@
         private System.Windows.Forms.TextBox txt_HdgFr;
         private System.Windows.Forms.Button btn_ApplyPlayers;
         private WeaponRate weaponRate;
-        private WeaponSlotRate weaponSlotRate;
         private WeaponTagRate weaponTagRate;
         private WeaponLevelRate weaponLevelRate;
         private System.Windows.Forms.Button btn_ApplyWeapons;
+        private WeaponSlotRate weaponSlotRate;
     }
 }
 

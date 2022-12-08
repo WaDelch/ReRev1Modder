@@ -58,7 +58,9 @@ namespace Rev1Modder
                 readBytes(GetTextFields("weaponRate").ToArray(), wRatePath, 32, 11, 1);
                 readBytes(GetTextFields("weaponLevelRate").ToArray(), wLevelPath, 30, 6, 100);
                 readBytes(GetTextFields("weaponTagRate").ToArray(), wTagPath, 30, 6, 1);
-                readBytes(GetTextFields("weaponSlotRate").ToArray(), wSlotPath, 188, 1, 100);
+                for (int i = 0; i < 6; i++)
+                    readBytes(GetTextFields("weaponSlotRate").ToArray().Skip(5 * i).Take(5).ToArray(), wSlotPath, 38 + (30 * i), 1, 100);
+                //readBytes(GetTextFields("weaponSlotRate").ToArray(), wSlotPath, 188, 1, 100);
             }
             catch
             {
@@ -68,16 +70,16 @@ namespace Rev1Modder
 
         void readBytes(TextBox[] tBoxes, string path, int startPos, int jump, int multiplier)
         {
-                byte[] getBytes = new byte[4];
-                FileStream cFile = new FileStream(path, FileMode.Open, FileAccess.Read);
-                cFile.Position = startPos;
-                foreach (TextBox tb in tBoxes)
-                {
-                    cFile.Read(getBytes, 0, 4);
-                    tb.Text = (BitConverter.ToSingle(getBytes, 0) * multiplier).ToString();
-                    cFile.Position += jump;
-                }
-                cFile.Close();
+            byte[] getBytes = new byte[4];
+            FileStream cFile = new FileStream(path, FileMode.Open, FileAccess.Read);
+            cFile.Position = startPos;
+            foreach (TextBox tb in tBoxes)
+            {
+                cFile.Read(getBytes, 0, 4);
+                tb.Text = (BitConverter.ToSingle(getBytes, 0) * multiplier).ToString();
+                cFile.Position += jump;
+            }
+            cFile.Close();
         }
 
         void writeBytes(TextBox[] tBoxes, string path, int startPos, int jump, int divider)
@@ -103,12 +105,12 @@ namespace Rev1Modder
 
         bool InputCheck(TextBox[] tBoxes)
         {
-            float check100 = 0;
+            float checkSum = 0;
             foreach (TextBox tb in tBoxes)
-                check100 += Convert.ToSingle(tb.Text);
-            if (check100 != 100)
+                checkSum += Convert.ToSingle(tb.Text);
+            if (checkSum != 100)
             {
-                MessageBox.Show("Error! Make sure all Fields add up to exactly 100.\nCurrent value: " + check100);
+                MessageBox.Show($"Error! Make sure all Fields add up to exactly 100 (per Set).\nCurrent value: {checkSum}");
                 return false;
             }
             else
@@ -159,6 +161,7 @@ namespace Rev1Modder
             TextBox[] weaponLevelRateBoxes = GetTextFields("weaponLevelRate").ToArray();
             TextBox[] weaponTagRateBoxes = GetTextFields("weaponTagRate").ToArray();
             TextBox[] weaponSlotRateBoxes = GetTextFields("weaponSlotRate").ToArray();
+            TextBox[] splitBoxes;
 
             if (rdb_WeaponRate.Checked)
             {
@@ -189,15 +192,20 @@ namespace Rev1Modder
 
             else if (rdb_WeaponSlotRate.Checked)
             {
-                if (InputCheck(weaponSlotRateBoxes))
+
+                for (int i = 0; i < 6; i++)
                 {
-                    writeBytes(weaponSlotRateBoxes, wSlotPath, 188, 1, 100);
-                    MessageBox.Show("Writing complete.");
+                    splitBoxes = weaponSlotRateBoxes.Skip(5 * i).Take(5).ToArray();
+                    if (InputCheck(splitBoxes))
+                        writeBytes(splitBoxes, wSlotPath, 38 + (30 * i), 1, 100);
+                    else
+                        MessageBox.Show("Error in Set " + (i + 1));
                 }
+                MessageBox.Show("Writing complete.");
             }
         }
 
-        //######################## Player Data ###################################
+        //############################# Player Data ###################################
 
         private void lbx_PlayerSelect_SelectedIndexChanged(object sender, EventArgs e)
         {

@@ -112,7 +112,7 @@
             this.txt_NoTag.MaxLength = 5;
             this.txt_NoTag.Name = "txt_NoTag";
             this.txt_NoTag.Size = new System.Drawing.Size(42, 22);
-            this.txt_NoTag.TabIndex = 4;
+            this.txt_NoTag.TabIndex = 1;
             this.txt_NoTag.Text = "00.00";
             this.txt_NoTag.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -124,7 +124,7 @@
             this.txt_ShortRange.MaxLength = 5;
             this.txt_ShortRange.Name = "txt_ShortRange";
             this.txt_ShortRange.Size = new System.Drawing.Size(42, 22);
-            this.txt_ShortRange.TabIndex = 3;
+            this.txt_ShortRange.TabIndex = 2;
             this.txt_ShortRange.Text = "00.00";
             this.txt_ShortRange.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -136,7 +136,7 @@
             this.txt_SpeedShot.MaxLength = 5;
             this.txt_SpeedShot.Name = "txt_SpeedShot";
             this.txt_SpeedShot.Size = new System.Drawing.Size(42, 22);
-            this.txt_SpeedShot.TabIndex = 21;
+            this.txt_SpeedShot.TabIndex = 8;
             this.txt_SpeedShot.Text = "00.00";
             this.txt_SpeedShot.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -148,7 +148,7 @@
             this.txt_SonicAssist.MaxLength = 5;
             this.txt_SonicAssist.Name = "txt_SonicAssist";
             this.txt_SonicAssist.Size = new System.Drawing.Size(42, 22);
-            this.txt_SonicAssist.TabIndex = 16;
+            this.txt_SonicAssist.TabIndex = 6;
             this.txt_SonicAssist.Text = "00.00";
             this.txt_SonicAssist.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -160,7 +160,7 @@
             this.txt_ShortRangeP.MaxLength = 5;
             this.txt_ShortRangeP.Name = "txt_ShortRangeP";
             this.txt_ShortRangeP.Size = new System.Drawing.Size(42, 22);
-            this.txt_ShortRangeP.TabIndex = 5;
+            this.txt_ShortRangeP.TabIndex = 3;
             this.txt_ShortRangeP.Text = "00.00";
             this.txt_ShortRangeP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -172,7 +172,7 @@
             this.txt_LongRange.MaxLength = 5;
             this.txt_LongRange.Name = "txt_LongRange";
             this.txt_LongRange.Size = new System.Drawing.Size(42, 22);
-            this.txt_LongRange.TabIndex = 6;
+            this.txt_LongRange.TabIndex = 4;
             this.txt_LongRange.Text = "00.00";
             this.txt_LongRange.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -184,7 +184,7 @@
             this.txt_SteadyHand.MaxLength = 5;
             this.txt_SteadyHand.Name = "txt_SteadyHand";
             this.txt_SteadyHand.Size = new System.Drawing.Size(42, 22);
-            this.txt_SteadyHand.TabIndex = 23;
+            this.txt_SteadyHand.TabIndex = 10;
             this.txt_SteadyHand.Text = "00.00";
             this.txt_SteadyHand.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -196,7 +196,7 @@
             this.txt_LightWeight.MaxLength = 5;
             this.txt_LightWeight.Name = "txt_LightWeight";
             this.txt_LightWeight.Size = new System.Drawing.Size(42, 22);
-            this.txt_LightWeight.TabIndex = 10;
+            this.txt_LightWeight.TabIndex = 12;
             this.txt_LightWeight.Text = "00.00";
             this.txt_LightWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -208,7 +208,7 @@
             this.txt_LongRangeP.MaxLength = 5;
             this.txt_LongRangeP.Name = "txt_LongRangeP";
             this.txt_LongRangeP.Size = new System.Drawing.Size(42, 22);
-            this.txt_LongRangeP.TabIndex = 12;
+            this.txt_LongRangeP.TabIndex = 5;
             this.txt_LongRangeP.Text = "00.00";
             this.txt_LongRangeP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -220,7 +220,7 @@
             this.txt_EasyGrip.MaxLength = 5;
             this.txt_EasyGrip.Name = "txt_EasyGrip";
             this.txt_EasyGrip.Size = new System.Drawing.Size(42, 22);
-            this.txt_EasyGrip.TabIndex = 14;
+            this.txt_EasyGrip.TabIndex = 11;
             this.txt_EasyGrip.Text = "00.00";
             this.txt_EasyGrip.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -232,7 +232,7 @@
             this.txt_SpeedLoad.MaxLength = 5;
             this.txt_SpeedLoad.Name = "txt_SpeedLoad";
             this.txt_SpeedLoad.Size = new System.Drawing.Size(42, 22);
-            this.txt_SpeedLoad.TabIndex = 22;
+            this.txt_SpeedLoad.TabIndex = 9;
             this.txt_SpeedLoad.Text = "00.00";
             this.txt_SpeedLoad.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -244,7 +244,7 @@
             this.txt_SonicAssistP.MaxLength = 5;
             this.txt_SonicAssistP.Name = "txt_SonicAssistP";
             this.txt_SonicAssistP.Size = new System.Drawing.Size(42, 22);
-            this.txt_SonicAssistP.TabIndex = 15;
+            this.txt_SonicAssistP.TabIndex = 7;
             this.txt_SonicAssistP.Text = "00.00";
             this.txt_SonicAssistP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -256,7 +256,7 @@
             this.txt_RareTag.MaxLength = 5;
             this.txt_RareTag.Name = "txt_RareTag";
             this.txt_RareTag.Size = new System.Drawing.Size(42, 22);
-            this.txt_RareTag.TabIndex = 20;
+            this.txt_RareTag.TabIndex = 13;
             this.txt_RareTag.Text = "00.00";
             this.txt_RareTag.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 

@@ -222,7 +222,7 @@
             this.txt_MP5.MaxLength = 5;
             this.txt_MP5.Name = "txt_MP5";
             this.txt_MP5.Size = new System.Drawing.Size(42, 22);
-            this.txt_MP5.TabIndex = 16;
+            this.txt_MP5.TabIndex = 8;
             this.txt_MP5.Text = "00.00";
             this.txt_MP5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -234,7 +234,7 @@
             this.txt_P90.MaxLength = 5;
             this.txt_P90.Name = "txt_P90";
             this.txt_P90.Size = new System.Drawing.Size(42, 22);
-            this.txt_P90.TabIndex = 15;
+            this.txt_P90.TabIndex = 9;
             this.txt_P90.Text = "00.00";
             this.txt_P90.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -246,7 +246,7 @@
             this.txt_Aug.MaxLength = 5;
             this.txt_Aug.Name = "txt_Aug";
             this.txt_Aug.Size = new System.Drawing.Size(42, 22);
-            this.txt_Aug.TabIndex = 21;
+            this.txt_Aug.TabIndex = 10;
             this.txt_Aug.Text = "00.00";
             this.txt_Aug.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -258,7 +258,7 @@
             this.txt_G36.MaxLength = 5;
             this.txt_G36.Name = "txt_G36";
             this.txt_G36.Size = new System.Drawing.Size(42, 22);
-            this.txt_G36.TabIndex = 22;
+            this.txt_G36.TabIndex = 11;
             this.txt_G36.Text = "00.00";
             this.txt_G36.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -270,7 +270,7 @@
             this.txt_HighRoller.MaxLength = 5;
             this.txt_HighRoller.Name = "txt_HighRoller";
             this.txt_HighRoller.Size = new System.Drawing.Size(42, 22);
-            this.txt_HighRoller.TabIndex = 23;
+            this.txt_HighRoller.TabIndex = 12;
             this.txt_HighRoller.Text = "00.00";
             this.txt_HighRoller.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -282,7 +282,7 @@
             this.txt_Windham.MaxLength = 5;
             this.txt_Windham.Name = "txt_Windham";
             this.txt_Windham.Size = new System.Drawing.Size(42, 22);
-            this.txt_Windham.TabIndex = 7;
+            this.txt_Windham.TabIndex = 13;
             this.txt_Windham.Text = "00.00";
             this.txt_Windham.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -294,7 +294,7 @@
             this.txt_M3.MaxLength = 5;
             this.txt_M3.Name = "txt_M3";
             this.txt_M3.Size = new System.Drawing.Size(42, 22);
-            this.txt_M3.TabIndex = 8;
+            this.txt_M3.TabIndex = 14;
             this.txt_M3.Text = "00.00";
             this.txt_M3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -306,7 +306,7 @@
             this.txt_Hydra.MaxLength = 5;
             this.txt_Hydra.Name = "txt_Hydra";
             this.txt_Hydra.Size = new System.Drawing.Size(42, 22);
-            this.txt_Hydra.TabIndex = 14;
+            this.txt_Hydra.TabIndex = 15;
             this.txt_Hydra.Text = "00.00";
             this.txt_Hydra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -318,7 +318,7 @@
             this.txt_Drake.MaxLength = 5;
             this.txt_Drake.Name = "txt_Drake";
             this.txt_Drake.Size = new System.Drawing.Size(42, 22);
-            this.txt_Drake.TabIndex = 10;
+            this.txt_Drake.TabIndex = 16;
             this.txt_Drake.Text = "00.00";
             this.txt_Drake.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -330,7 +330,7 @@
             this.txt_M40A1.MaxLength = 5;
             this.txt_M40A1.Name = "txt_M40A1";
             this.txt_M40A1.Size = new System.Drawing.Size(42, 22);
-            this.txt_M40A1.TabIndex = 20;
+            this.txt_M40A1.TabIndex = 17;
             this.txt_M40A1.Text = "00.00";
             this.txt_M40A1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -342,7 +342,7 @@
             this.txt_PSG1.MaxLength = 5;
             this.txt_PSG1.Name = "txt_PSG1";
             this.txt_PSG1.Size = new System.Drawing.Size(42, 22);
-            this.txt_PSG1.TabIndex = 11;
+            this.txt_PSG1.TabIndex = 18;
             this.txt_PSG1.Text = "00.00";
             this.txt_PSG1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -354,7 +354,7 @@
             this.txt_Muramasa.MaxLength = 5;
             this.txt_Muramasa.Name = "txt_Muramasa";
             this.txt_Muramasa.Size = new System.Drawing.Size(42, 22);
-            this.txt_Muramasa.TabIndex = 11;
+            this.txt_Muramasa.TabIndex = 19;
             this.txt_Muramasa.Text = "00.00";
             this.txt_Muramasa.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 

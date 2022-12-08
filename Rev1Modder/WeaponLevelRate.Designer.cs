@@ -40,17 +40,6 @@
             this.tlp_WeaponLevelRate.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lbl_Lv47
-            // 
-            this.lbl_Lv47.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_Lv47.AutoSize = true;
-            this.lbl_Lv47.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Lv47.Location = new System.Drawing.Point(3, 14);
-            this.lbl_Lv47.Name = "lbl_Lv47";
-            this.lbl_Lv47.Size = new System.Drawing.Size(57, 16);
-            this.lbl_Lv47.TabIndex = 2;
-            this.lbl_Lv47.Text = "Level 47";
-            // 
             // lbl_Lv48
             // 
             this.lbl_Lv48.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -61,6 +50,17 @@
             this.lbl_Lv48.Size = new System.Drawing.Size(57, 16);
             this.lbl_Lv48.TabIndex = 2;
             this.lbl_Lv48.Text = "Level 48";
+            // 
+            // lbl_Lv47
+            // 
+            this.lbl_Lv47.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_Lv47.AutoSize = true;
+            this.lbl_Lv47.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Lv47.Location = new System.Drawing.Point(3, 14);
+            this.lbl_Lv47.Name = "lbl_Lv47";
+            this.lbl_Lv47.Size = new System.Drawing.Size(57, 16);
+            this.lbl_Lv47.TabIndex = 2;
+            this.lbl_Lv47.Text = "Level 47";
             // 
             // lbl_Lv49
             // 
@@ -92,7 +92,7 @@
             this.txt_Lv47.MaxLength = 5;
             this.txt_Lv47.Name = "txt_Lv47";
             this.txt_Lv47.Size = new System.Drawing.Size(42, 22);
-            this.txt_Lv47.TabIndex = 4;
+            this.txt_Lv47.TabIndex = 1;
             this.txt_Lv47.Text = "00.00";
             this.txt_Lv47.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -104,7 +104,7 @@
             this.txt_Lv48.MaxLength = 5;
             this.txt_Lv48.Name = "txt_Lv48";
             this.txt_Lv48.Size = new System.Drawing.Size(42, 22);
-            this.txt_Lv48.TabIndex = 3;
+            this.txt_Lv48.TabIndex = 2;
             this.txt_Lv48.Text = "00.00";
             this.txt_Lv48.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -116,7 +116,7 @@
             this.txt_Lv49.MaxLength = 5;
             this.txt_Lv49.Name = "txt_Lv49";
             this.txt_Lv49.Size = new System.Drawing.Size(42, 22);
-            this.txt_Lv49.TabIndex = 5;
+            this.txt_Lv49.TabIndex = 3;
             this.txt_Lv49.Text = "00.00";
             this.txt_Lv49.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -128,7 +128,7 @@
             this.txt_Lv50.MaxLength = 5;
             this.txt_Lv50.Name = "txt_Lv50";
             this.txt_Lv50.Size = new System.Drawing.Size(42, 22);
-            this.txt_Lv50.TabIndex = 6;
+            this.txt_Lv50.TabIndex = 4;
             this.txt_Lv50.Text = "00.00";
             this.txt_Lv50.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
