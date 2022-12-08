@@ -48,7 +48,7 @@ Sonic Assist+ 	3,5
 Rare Tag 	3
 
 <WeaponSlotRate>
-start 7th set at 0xBC, 0xA per Slot
+start 6th set at 0xBC, 0xA per Slot
 -2 		9
 -1 		22
 +0 		41
