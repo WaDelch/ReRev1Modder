@@ -110,7 +110,7 @@ namespace Rev1Modder
                 checkSum += Convert.ToSingle(tb.Text);
             if (checkSum != 100)
             {
-                MessageBox.Show($"Error! Make sure all Fields add up to exactly 100 (per Set).\nCurrent value: {checkSum}");
+                MessageBox.Show($"Error! Make sure all fields add up to exactly 100 (per set).\nCurrent value: {checkSum}");
                 return false;
             }
             else
