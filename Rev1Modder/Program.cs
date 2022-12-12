@@ -26,15 +26,5 @@ namespace Rev1Modder
             var children = (control.Controls != null) ? control.Controls.OfType<TControl>() : Enumerable.Empty<TControl>();
             return children.SelectMany(c => GetChildControls<TControl>(c)).Concat(children);
         }
-
-        public static void Hex2Float()
-        {
-
-        }
-
-        public static void Float2Hex()
-        {
-
-        }
     }
 }

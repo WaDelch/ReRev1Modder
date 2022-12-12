@@ -16,7 +16,8 @@ namespace Rev1Modder
         public frm_StartFrame()
         {
             InitializeComponent();
-            txt_Path.Text = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + "\\coop_table";
+            //txt_Path.Text = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + "\\coop_table";
+            txt_Path.Text = Application.StartupPath + @"\coop_table\game\coop_table";
         }
 
         private void btn_Path_Click(object sender, EventArgs e)
