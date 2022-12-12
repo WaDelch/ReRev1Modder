@@ -5,13 +5,19 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/* ####################################################
+ * ### Modding tool for Resident Evil Revelations 1 ###
+ * ### Author: WaDelch                              ###
+ * ####################################################
+ */
+
 namespace Rev1Modder
 {
     internal static class Program
     {
 
         /// <summary>
-        /// Der Haupteinstiegspunkt für die Anwendung.
+        /// Main entry point.
         /// </summary>
         [STAThread]
         static void Main()
