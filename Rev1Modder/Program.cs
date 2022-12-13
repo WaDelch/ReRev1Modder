@@ -11,7 +11,7 @@ namespace Rev1Modder
     {
 
         /// <summary>
-        /// Der Haupteinstiegspunkt für die Anwendung.
+        /// Main entry point.
         /// </summary>
         [STAThread]
         static void Main()
