@@ -1,9 +1,13 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+
+/* ####################################################
+ * ### Modding tool for Resident Evil Revelations 1 ###
+ * ### Author: WaDelch                              ###
+ * ####################################################
+ */
 
 namespace Rev1Modder
 {
