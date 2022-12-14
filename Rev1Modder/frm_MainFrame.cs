@@ -71,15 +71,16 @@ namespace Rev1Modder
 
         void readBytes(TextBox[] tBoxes, string path, int startPos, int jump, int multiplier)
         {
-                byte[] getBytes = new byte[4];
-                FileStream cFile = new FileStream(path, FileMode.Open, FileAccess.Read);
-                cFile.Position = startPos;
-                foreach (TextBox tb in tBoxes)
-                {
-                    cFile.Read(getBytes, 0, 4);
-                    tb.Text = (BitConverter.ToSingle(getBytes, 0) * multiplier).ToString();
-                    cFile.Position += jump;
-                }
+            byte[] getBytes = new byte[4];
+            FileStream cFile = new FileStream(path, FileMode.Open, FileAccess.Read);
+            cFile.Position = startPos;
+            foreach (TextBox tb in tBoxes)
+            {
+                cFile.Read(getBytes, 0, 4);
+                tb.Text = (BitConverter.ToSingle(getBytes, 0) * multiplier).ToString();
+                cFile.Position += jump;
+            }
+            cFile.Close();
         }
 
         void writeBytes(TextBox[] tBoxes, string path, int startPos, int jump, int divider)
