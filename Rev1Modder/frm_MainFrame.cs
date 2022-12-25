@@ -60,7 +60,7 @@ namespace Rev1Modder
                 readBytes(GetTextFields(FType.weaponLevelRate).ToArray(), wLevelPath, 30, 6, 100);
                 readBytes(GetTextFields(FType.WeaponTagRate).ToArray(), wTagPath, 30, 6, 1);
                 for (int i = 0; i < 6; i++)
-                    readBytes(GetTextFields(FType.weaponSlotRate).ToArray().Skip(5 * i).Take(5).ToArray(), wSlotPath, 38 + (30 * i), 1, 100);
+                    readBytes(GetTextFields(FType.weaponSlotRate).Skip(5 * i).Take(5).ToArray(), wSlotPath, 38 + (30 * i), 1, 100);
                 //readBytes(GetTextFields("weaponSlotRate").ToArray(), wSlotPath, 188, 1, 100); //reads only set 6
             }
             catch
