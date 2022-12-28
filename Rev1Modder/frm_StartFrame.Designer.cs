@@ -68,10 +68,10 @@
             // lbl_Path
             // 
             this.lbl_Path.AutoSize = true;
-            this.lbl_Path.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Path.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Path.Location = new System.Drawing.Point(18, 65);
             this.lbl_Path.Name = "lbl_Path";
-            this.lbl_Path.Size = new System.Drawing.Size(278, 16);
+            this.lbl_Path.Size = new System.Drawing.Size(322, 16);
             this.lbl_Path.TabIndex = 6;
             this.lbl_Path.Text = "Select the (uncompressed!) coop_table folder";
             // 

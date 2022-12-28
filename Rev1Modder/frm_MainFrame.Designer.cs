@@ -35,10 +35,6 @@
             this.rdb_WeaponSlotRate = new System.Windows.Forms.RadioButton();
             this.rdb_WeaponLevelRate = new System.Windows.Forms.RadioButton();
             this.rdb_WeaponRate = new System.Windows.Forms.RadioButton();
-            this.weaponSlotRate = new Rev1Modder.WeaponSlotRate();
-            this.weaponTagRate = new Rev1Modder.WeaponTagRate();
-            this.weaponLevelRate = new Rev1Modder.WeaponLevelRate();
-            this.weaponRate = new Rev1Modder.WeaponRate();
             this.tbp_Player = new System.Windows.Forms.TabPage();
             this.btn_ApplyPlayers = new System.Windows.Forms.Button();
             this.tlp_Player = new System.Windows.Forms.TableLayoutPanel();
@@ -79,16 +75,30 @@
             this.lbl_Evade = new System.Windows.Forms.Label();
             this.lbl_Recovery = new System.Windows.Forms.Label();
             this.lbx_PlayerSelect = new System.Windows.Forms.ListBox();
+            this.tbp_Store = new System.Windows.Forms.TabPage();
+            this.btn_ApplyStore = new System.Windows.Forms.Button();
+            this.txt_StorePrice = new System.Windows.Forms.TextBox();
+            this.lbl_StorePrice = new System.Windows.Forms.Label();
+            this.lbl_StoreItemSelect = new System.Windows.Forms.Label();
+            this.rdb_StoreTags = new System.Windows.Forms.RadioButton();
+            this.rdb_StoreUpgrades = new System.Windows.Forms.RadioButton();
+            this.lbx_StoreItemSelect = new System.Windows.Forms.ListBox();
+            this.weaponSlotRate = new Rev1Modder.WeaponSlotRate();
+            this.weaponTagRate = new Rev1Modder.WeaponTagRate();
+            this.weaponLevelRate = new Rev1Modder.WeaponLevelRate();
+            this.weaponRate = new Rev1Modder.WeaponRate();
             this.tbc_Main.SuspendLayout();
             this.tbp_Weapons.SuspendLayout();
             this.tbp_Player.SuspendLayout();
             this.tlp_Player.SuspendLayout();
+            this.tbp_Store.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbc_Main
             // 
             this.tbc_Main.Controls.Add(this.tbp_Weapons);
             this.tbc_Main.Controls.Add(this.tbp_Player);
+            this.tbc_Main.Controls.Add(this.tbp_Store);
             this.tbc_Main.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbc_Main.Location = new System.Drawing.Point(0, 0);
             this.tbc_Main.Name = "tbc_Main";
@@ -118,7 +128,7 @@
             // btn_ApplyWeapons
             // 
             this.btn_ApplyWeapons.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ApplyWeapons.Location = new System.Drawing.Point(743, 364);
+            this.btn_ApplyWeapons.Location = new System.Drawing.Point(745, 370);
             this.btn_ApplyWeapons.Name = "btn_ApplyWeapons";
             this.btn_ApplyWeapons.Size = new System.Drawing.Size(94, 37);
             this.btn_ApplyWeapons.TabIndex = 5;
@@ -178,44 +188,6 @@
             this.rdb_WeaponRate.UseVisualStyleBackColor = true;
             this.rdb_WeaponRate.CheckedChanged += new System.EventHandler(this.rdb_WeaponRate_CheckedChanged);
             // 
-            // weaponSlotRate
-            // 
-            this.weaponSlotRate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.weaponSlotRate.Location = new System.Drawing.Point(8, 55);
-            this.weaponSlotRate.Margin = new System.Windows.Forms.Padding(4);
-            this.weaponSlotRate.Name = "weaponSlotRate";
-            this.weaponSlotRate.Size = new System.Drawing.Size(840, 360);
-            this.weaponSlotRate.TabIndex = 6;
-            // 
-            // weaponTagRate
-            // 
-            this.weaponTagRate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.weaponTagRate.Location = new System.Drawing.Point(8, 55);
-            this.weaponTagRate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.weaponTagRate.Name = "weaponTagRate";
-            this.weaponTagRate.Size = new System.Drawing.Size(840, 360);
-            this.weaponTagRate.TabIndex = 3;
-            this.weaponTagRate.Visible = false;
-            // 
-            // weaponLevelRate
-            // 
-            this.weaponLevelRate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.weaponLevelRate.Location = new System.Drawing.Point(8, 55);
-            this.weaponLevelRate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.weaponLevelRate.Name = "weaponLevelRate";
-            this.weaponLevelRate.Size = new System.Drawing.Size(840, 360);
-            this.weaponLevelRate.TabIndex = 2;
-            this.weaponLevelRate.Visible = false;
-            // 
-            // weaponRate
-            // 
-            this.weaponRate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.weaponRate.Location = new System.Drawing.Point(8, 55);
-            this.weaponRate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.weaponRate.Name = "weaponRate";
-            this.weaponRate.Size = new System.Drawing.Size(808, 328);
-            this.weaponRate.TabIndex = 1;
-            // 
             // tbp_Player
             // 
             this.tbp_Player.BackColor = System.Drawing.SystemColors.Control;
@@ -234,7 +206,7 @@
             // btn_ApplyPlayers
             // 
             this.btn_ApplyPlayers.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ApplyPlayers.Location = new System.Drawing.Point(752, 192);
+            this.btn_ApplyPlayers.Location = new System.Drawing.Point(743, 368);
             this.btn_ApplyPlayers.Name = "btn_ApplyPlayers";
             this.btn_ApplyPlayers.Size = new System.Drawing.Size(94, 37);
             this.btn_ApplyPlayers.TabIndex = 4;
@@ -751,6 +723,158 @@
             this.lbx_PlayerSelect.TabIndex = 1;
             this.lbx_PlayerSelect.SelectedIndexChanged += new System.EventHandler(this.lbx_PlayerSelect_SelectedIndexChanged);
             // 
+            // tbp_Store
+            // 
+            this.tbp_Store.BackColor = System.Drawing.SystemColors.Control;
+            this.tbp_Store.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tbp_Store.Controls.Add(this.btn_ApplyStore);
+            this.tbp_Store.Controls.Add(this.txt_StorePrice);
+            this.tbp_Store.Controls.Add(this.lbl_StorePrice);
+            this.tbp_Store.Controls.Add(this.lbl_StoreItemSelect);
+            this.tbp_Store.Controls.Add(this.rdb_StoreTags);
+            this.tbp_Store.Controls.Add(this.rdb_StoreUpgrades);
+            this.tbp_Store.Controls.Add(this.lbx_StoreItemSelect);
+            this.tbp_Store.Location = new System.Drawing.Point(4, 25);
+            this.tbp_Store.Name = "tbp_Store";
+            this.tbp_Store.Padding = new System.Windows.Forms.Padding(3);
+            this.tbp_Store.Size = new System.Drawing.Size(858, 419);
+            this.tbp_Store.TabIndex = 2;
+            this.tbp_Store.Text = "Store";
+            // 
+            // btn_ApplyStore
+            // 
+            this.btn_ApplyStore.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ApplyStore.Location = new System.Drawing.Point(743, 368);
+            this.btn_ApplyStore.Name = "btn_ApplyStore";
+            this.btn_ApplyStore.Size = new System.Drawing.Size(94, 37);
+            this.btn_ApplyStore.TabIndex = 6;
+            this.btn_ApplyStore.Text = "Apply";
+            this.btn_ApplyStore.UseVisualStyleBackColor = true;
+            this.btn_ApplyStore.Click += new System.EventHandler(this.btn_ApplyStore_Click);
+            // 
+            // txt_StorePrice
+            // 
+            this.txt_StorePrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_StorePrice.Location = new System.Drawing.Point(215, 86);
+            this.txt_StorePrice.MaxLength = 8;
+            this.txt_StorePrice.Name = "txt_StorePrice";
+            this.txt_StorePrice.Size = new System.Drawing.Size(135, 22);
+            this.txt_StorePrice.TabIndex = 4;
+            this.txt_StorePrice.Text = "0";
+            this.txt_StorePrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // lbl_StorePrice
+            // 
+            this.lbl_StorePrice.AutoSize = true;
+            this.lbl_StorePrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_StorePrice.Location = new System.Drawing.Point(213, 53);
+            this.lbl_StorePrice.Name = "lbl_StorePrice";
+            this.lbl_StorePrice.Size = new System.Drawing.Size(83, 16);
+            this.lbl_StorePrice.TabIndex = 5;
+            this.lbl_StorePrice.Text = "Store price";
+            // 
+            // lbl_StoreItemSelect
+            // 
+            this.lbl_StoreItemSelect.AutoSize = true;
+            this.lbl_StoreItemSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_StoreItemSelect.Location = new System.Drawing.Point(13, 53);
+            this.lbl_StoreItemSelect.Name = "lbl_StoreItemSelect";
+            this.lbl_StoreItemSelect.Size = new System.Drawing.Size(113, 16);
+            this.lbl_StoreItemSelect.TabIndex = 5;
+            this.lbl_StoreItemSelect.Text = "Select upgrade";
+            // 
+            // rdb_StoreTags
+            // 
+            this.rdb_StoreTags.AutoSize = true;
+            this.rdb_StoreTags.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdb_StoreTags.Location = new System.Drawing.Point(213, 13);
+            this.rdb_StoreTags.Name = "rdb_StoreTags";
+            this.rdb_StoreTags.Size = new System.Drawing.Size(106, 20);
+            this.rdb_StoreTags.TabIndex = 2;
+            this.rdb_StoreTags.Text = "Weapon tags";
+            this.rdb_StoreTags.UseVisualStyleBackColor = true;
+            this.rdb_StoreTags.CheckedChanged += new System.EventHandler(this.rdb_StoreTags_CheckedChanged);
+            // 
+            // rdb_StoreUpgrades
+            // 
+            this.rdb_StoreUpgrades.AutoSize = true;
+            this.rdb_StoreUpgrades.Checked = true;
+            this.rdb_StoreUpgrades.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdb_StoreUpgrades.Location = new System.Drawing.Point(13, 13);
+            this.rdb_StoreUpgrades.Name = "rdb_StoreUpgrades";
+            this.rdb_StoreUpgrades.Size = new System.Drawing.Size(138, 20);
+            this.rdb_StoreUpgrades.TabIndex = 1;
+            this.rdb_StoreUpgrades.TabStop = true;
+            this.rdb_StoreUpgrades.Text = "Weapon upgrades";
+            this.rdb_StoreUpgrades.UseVisualStyleBackColor = true;
+            this.rdb_StoreUpgrades.CheckedChanged += new System.EventHandler(this.rdb_StoreUpgrades_CheckedChanged);
+            // 
+            // lbx_StoreItemSelect
+            // 
+            this.lbx_StoreItemSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbx_StoreItemSelect.FormattingEnabled = true;
+            this.lbx_StoreItemSelect.ItemHeight = 16;
+            this.lbx_StoreItemSelect.Items.AddRange(new object[] {
+            "fire rate: pistol",
+            "fire rate: shotgun",
+            "fire rate: machine gun",
+            "fire rate: rifle",
+            "fire rate: magnum",
+            "capacity: pistol",
+            "capacity: shotgun",
+            "capacity: machine gun",
+            "capacity: rifle",
+            "capacity: magnum",
+            "firepower: pistol",
+            "firepower: shotgun",
+            "firepower: machine gun",
+            "firepower: rifle",
+            "firepower: magnum"});
+            this.lbx_StoreItemSelect.Location = new System.Drawing.Point(13, 86);
+            this.lbx_StoreItemSelect.Name = "lbx_StoreItemSelect";
+            this.lbx_StoreItemSelect.Size = new System.Drawing.Size(155, 244);
+            this.lbx_StoreItemSelect.TabIndex = 3;
+            this.lbx_StoreItemSelect.SelectedIndexChanged += new System.EventHandler(this.lbx_StoreItemSelect_SelectedIndexChanged);
+            // 
+            // weaponSlotRate
+            // 
+            this.weaponSlotRate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.weaponSlotRate.Location = new System.Drawing.Point(8, 55);
+            this.weaponSlotRate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.weaponSlotRate.Name = "weaponSlotRate";
+            this.weaponSlotRate.Size = new System.Drawing.Size(840, 360);
+            this.weaponSlotRate.TabIndex = 6;
+            this.weaponSlotRate.Visible = false;
+            // 
+            // weaponTagRate
+            // 
+            this.weaponTagRate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.weaponTagRate.Location = new System.Drawing.Point(8, 55);
+            this.weaponTagRate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.weaponTagRate.Name = "weaponTagRate";
+            this.weaponTagRate.Size = new System.Drawing.Size(840, 360);
+            this.weaponTagRate.TabIndex = 3;
+            this.weaponTagRate.Visible = false;
+            // 
+            // weaponLevelRate
+            // 
+            this.weaponLevelRate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.weaponLevelRate.Location = new System.Drawing.Point(8, 55);
+            this.weaponLevelRate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.weaponLevelRate.Name = "weaponLevelRate";
+            this.weaponLevelRate.Size = new System.Drawing.Size(840, 360);
+            this.weaponLevelRate.TabIndex = 2;
+            this.weaponLevelRate.Visible = false;
+            // 
+            // weaponRate
+            // 
+            this.weaponRate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.weaponRate.Location = new System.Drawing.Point(8, 55);
+            this.weaponRate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.weaponRate.Name = "weaponRate";
+            this.weaponRate.Size = new System.Drawing.Size(840, 360);
+            this.weaponRate.TabIndex = 1;
+            // 
             // frm_MainFrame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -766,6 +890,8 @@
             this.tbp_Player.ResumeLayout(false);
             this.tlp_Player.ResumeLayout(false);
             this.tlp_Player.PerformLayout();
+            this.tbp_Store.ResumeLayout(false);
+            this.tbp_Store.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -823,6 +949,14 @@
         private WeaponLevelRate weaponLevelRate;
         private System.Windows.Forms.Button btn_ApplyWeapons;
         private WeaponSlotRate weaponSlotRate;
+        private System.Windows.Forms.TabPage tbp_Store;
+        private System.Windows.Forms.ListBox lbx_StoreItemSelect;
+        private System.Windows.Forms.Button btn_ApplyStore;
+        private System.Windows.Forms.TextBox txt_StorePrice;
+        private System.Windows.Forms.Label lbl_StorePrice;
+        private System.Windows.Forms.Label lbl_StoreItemSelect;
+        private System.Windows.Forms.RadioButton rdb_StoreTags;
+        private System.Windows.Forms.RadioButton rdb_StoreUpgrades;
     }
 }
 
